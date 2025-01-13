@@ -1,0 +1,421 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Sign Up - Support African Children</title> <style> body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }
+header { background-color: #007bff; color: white; text-align: center; padding: 20px; }
+.logo { font-size: 1.5em; margin-bottom: 10px; }
+main { max-width: 600px; margin: 50px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
+h1, h2 { margin: 0 0 20px; }
+.form-group { margin-bottom: 15px; }
+label {
+display: block; margin-bottom: 5px; font-weight: bold;
+}
+input[type="text"], input[type="email"], input[type="tel"], 
+input[type="password"], select { width: 100%; padding: 10px; 
+border: 1px solid #ccc; border-radius: 4px; }
+button { background-color: #28a745; color: white; border: none; 
+padding: 10px; border-radius: 4px; cursor: pointer; width: 100%; }
+button:hover { background-color: #218838; }
+.checkbox-group { margin-top: 10px; }
+footer { text-align: center; margin-top: 20px; font-size: 0.9em; }
+footer a { color: #007bff; }
+footer a:hover { text-decoration: underline; } </style> 
+</head> <body> <header> <div class="logo"></div> 
+<h1>Join Us in Making a Difference for African Children</h1> </header>
+<main> <form class="signup-form" onsubmit="return validateForm()">
+ <h2>Sign Up</h2> <div class="form-group"> <label for="name">Full Name</label> 
+<input type="text" id="name" required aria-label="Full Name"> 
+</div> <div class="form-group"> <label for="email">Email Address</label> 
+<input type="email" id="email" required aria-label="Email Address"> 
+</div> <div class="form-group"> <label for="phone">Phone Number 
+(Optional)</label> <input type="tel" id="phone" aria-label="Phone Number">
+ </div> <div class="form-group"> <label for="country">Country</label>
+ <select id="country" required aria-label="Country"> 
+<option value="">Select your country</option>
+<option 
+value="al">Albania</option>
+<option 
+value="dz">Algeria</option>
+<option 
+value="as">American Samoa</option>
+<option 
+value="ad">Andorra</option>
+<option 
+value="ao">Angola</option>
+<option 
+value="ai">Anguilla</option>
+<option 
+value="ag">Antigua and Barbuda</option>
+<option 
+value="ar">Argentina</option>
+<option 
+value="am">Armenia</option>
+<option 
+value="aw">Aruba</option>
+<option 
+value="au">Austria</option>
+<option 
+value="az">Azerbaijan</option>
+<option 
+value="bs">Bahamas</option>
+<option 
+value="bh">Bahrain</option>
+<option 
+value="bd">Bangladesh</option>
+<option 
+value="bb">Barbados</option>
+<option 
+value="by">Belarus</option>
+<option 
+value="be">Belgium</option>
+<option 
+value="bz">Belize</option>
+<option 
+value="bj">Benin</option>
+<option 
+value="bm">Bermuda</option>
+<option 
+value="bt">Bhutan</option>
+<option 
+value="bo">Bolivia</option>
+<option 
+value="ba">Bosnia and Heerzegovina</option>
+<option 
+value="bw">Botswana</option>
+<option 
+value="br">Brazil</option>
+<option 
+value="bh">Brunel</option>
+<option 
+value="bg">Bulgaria</option>
+<option 
+value="bf">Burkina Faso </option>
+<option 
+value="bi">Burundi</option>
+<option 
+value="cv">Cabo Verde</option>
+<option 
+value="kh">Cambodia</option>
+<option 
+value="cm">Cameroon</option>
+<option 
+value="ca">Canada</option>
+<option 
+value="ky">Cayman</option>
+<option 
+value="cf">Central African Republic</option>
+<option 
+value="td">Chad</option>
+<option 
+value="cl">Chile</option>
+<option 
+value="cn">China</option>
+<option 
+value="co">Colombia</option>
+<option 
+value="km">Comoros</option>
+<option 
+value="cg">Congo</option>
+<option 
+value="cd">Democratic Republic of Congo</option>
+<option 
+value="us">Cote d'Ivoire</option> 
+<option 
+value="hr">Croatia</option>
+<option 
+value="cu">cuba</option> 
+<option
+value="cy">Cyprus</option>
+<option
+value="cz">Czech Republic</option>
+<option
+value="dk">Denmark</option>
+<option
+value="dj">Djibouti</option>
+<option
+value="dm">Dominica</option>
+<option
+value="do">Dominican Republic</option>
+<option
+value="ec">Ecuador</option>
+<option
+value="eg">Egypt</option>
+<option
+value="sv">El Salvador</option>
+<option
+value="gq">Equatoria Guinea</option>
+<option
+value="er">Eritrea</option>
+<option
+value="ee">Estonia</option>
+<option
+value="sz">Eswatini</option>
+<option
+value="et">Ethiopia</option>
+<option
+value="fj">Fiji</option>
+<option
+value="fi">Finland</option>
+<option
+value="fr">France</option>
+<option
+value="ga">Gabon</option>
+<option
+value="gm">Gambia</option>
+<option
+value="ge">Georgia</option>
+<option
+value="de">Germany</option>
+<option
+value="gh">Ghana</option>
+<option
+value="gr">Greece</option>
+<option
+value="gd">Grenade</option>
+<option
+value="gu">Guam</option>
+<option
+value="gt">Guatemala</option>
+<option
+value="gn">Guinea</option>
+<option
+value="gw">Guinea-Bissau</option>
+<option
+value="gy">Guyana</option>
+<option
+value="ht">Haiti</option>
+<option
+value="hn">Honduras</option>
+<option
+value="hu">Hungary</option>
+<option
+value="is">Iceland</option>
+<option
+value="in">India</option>
+<option
+value="id">Idonesia</option>
+<option
+value="ir">Iran</option>
+<option
+value="iq">Iraq</option>
+<option
+value="ie">Ireland</option>
+<option
+value="il">Israel</option>
+<option
+value="jm">Jamaica</option>
+<option
+value="jp">Japan</option>
+<option
+value="jo">Jordan</option>
+<option
+value="kz">Kazakhastan</option>
+<option
+value="ke">Kenya</option>
+<option
+value="ki">Kiribati</option>
+<option
+value="kw">Kuwait</option>
+<option
+value="kg">kyrgyzstan</option>
+<option
+value="la">Laos</option>
+<option
+value="lv">Latvia</option>
+<option
+value="lb">Lebanon</option>
+<option
+value="Is">Lesotho</option>
+<option
+value="lr">Liberia</option>
+<option
+value="ly">Libya</option>
+<option
+value="li">Liechtenstein</option>
+<option
+value="lt">Lithuania</option>
+<option
+value="lu">Luxembourg</option>
+<option
+value="mg">Madagascar</option>
+<option
+value="mw">Malawi</option>
+<option
+value="my">Malaysia</option>
+<option
+value="mv">Maldives</option>
+<option
+value="ml">Mali</option>
+<option
+value="mt">Malta</option>
+<option
+value="mh">Marshall</option>
+<option
+value="mr">Mauritania</option>
+<option
+value="mu">Mauritius</option>
+<option
+value="mx">Mexico</option>
+<option
+value="fm">Micronesia</option>
+<option
+value="md">Moldova</option>
+<option
+value="mc">Monaco</option>
+<option
+value="mn">Mongolia</option>
+<option
+value="me">Montenegro</option>
+<option
+value="ma">Morocco</option>
+<option
+value="mz">Mozambique</option>
+<option
+value="mm">Myanmar</option>
+<option
+value="na">Namibia</option>
+<option
+value="nr">Nauru</option>
+<option
+value="np">Nepal</option>
+<option
+value="nl">Netherlands</option>
+<option
+value="nz">New Zealand</option>
+<option
+value="ni">Nicaragua</option>
+<option
+value="ne">Niger</option>
+<option
+value="ng">Nigeria</option>
+<option
+value="kp">North Korea</option>
+<option
+value="mk">North Macedonia</option>
+<option
+value="no">Norway</option>
+<option
+value="pk">Pakistan</option>
+<option
+value="pw">Palau</option>
+<option
+value="ps">Palestine</option>
+<option
+value="pa">Panama</option>
+<option
+value="pg">Papua New Guinea</option>
+<option
+value="py">Paraguay</option>
+<option
+value="pe">Peru</option>
+<option
+value="ph">Phillipines</option>
+<option
+value="pl">Poland</option>
+<option
+value="pt">Portugal</option>
+<option
+value="pr">Puerto Rico</option>
+<option
+value="qa">Qatar</option>
+<option
+value="ro">Romania</option>
+<option
+value="ru">Russia</option>
+<option
+value="rw">Rwanda</option>
+<option
+value="kn">Saint Kitts and Nevis</option>
+<option
+value="kn">Saint Lucia</option>
+<option
+value="vc">Saint Vincent and the Grenadines</option>
+<option
+value="ws">Samoa</option>
+<option
+value="sm">San Marino</option><option
+value="st">Sao Tome and Principle</option><option
+value="sa">Saudi Arabia</option><option
+value="sn">Senegal</option><option
+value="rs">Serbia</option><option
+value="sc">Seychelles</option><option
+<option
+value="sl">Sierra Leone</option><option
+value="sg">Singapore</option><option
+value="sk">Slovakia</option><option
+value="si">Slovenia</option><option
+value="sb">Solomon Island</option>
+<option
+value="so">Somalia</option>
+<option
+value="th">Thailand</option><option
+value="tr">Turkey</option><option
+value="tn">Tunisia</option><option
+value="tz">Tanzania</option><option
+value="ug">Uganda</option>
+<option
+value="ua">Ukraine</option>
+<option
+value="ae">United Arab Emirates</option><option
+value="gb">United Kingdom</option><option
+value="us">United States</option><option
+value="vu">Vanuatu</option>
+<option
+value="va">Vatican</option><option
+value="ve">Venezuela</option><option
+value="vn">Vietnam</option><option
+value="eh">Western Saraha</option>
+<option
+value="ye">Yemen</option><option
+value="zm">Zambia</option>
+<option
+value="zw">Zimbabwe</option>
+ </select> </div> <div class="form-group">
+ <label for="state">State/Region</label>
+ <input type="text" id="state" 
+required aria-label="State/Region"> </div>
+ <div class="form-group">
+ <label for="city">City</label> 
+<input type="text" id="city" required aria-label="City"> </div>
+<div class="form-group"> 
+<label for="password">Create Password</label> <input type="password" id="password"
+ required aria-label="Create Password"> </div> <div class="form-group">
+ <label for="confirm-password">Confirm Password</label> 
+<input type="password" id="confirm-password" required aria-label="Confirm Password"> 
+</div> <fieldset class="form-group checkbox-group"> 
+<legend>Areas of Support:</legend> <div>
+ <input type="checkbox" id="education" name="interests" 
+value="Education" aria-label="Education"> 
+<label for="education">Education</label>
+ </div> <div> <input type="checkbox" id="health" 
+name="interests" value="Health Care" aria-label="Health Care"> 
+<label for="health">Health Care</label> </div> <div> 
+<input type="checkbox" id="nutrition" name="interests"
+ value="Nutrition" aria-label="Nutrition">
+ <label for="nutrition">Nutrition</label>
+ </div> <div> <input type="checkbox" id="community"
+ name="interests" value="Community Development" 
+aria-label="Community Development"> 
+<label for="community">Community Development</label>
+ </div> 
+<div>
+ <input type="checkbox" id="other"
+ name="interests" value="Other" aria-label="Other">
+ <label for="other">Other</label> <input type="text"
+ id="other-text" aria-label="Other Interests">
+</div> </fieldset> <div class="form-group">
+ <input type="checkbox" id="newsletter" aria-label="Newsletter">
+ <label for="newsletter">Yes, I want to receive updates and newsletters.</label>
+ </div> <div class="form-group"> 
+<input type="checkbox" id="terms"
+ required aria-label="Terms and Conditions">
+<label for="terms">I agree to the <a href="terms.html">Terms and Conditions and Privacy Policy</a>.</label>
+ </div> <button type="hee.html">Join Us Now</button> 
+</form> <p>Already a member? <a href="login.html">Login here</a></p>
+<p>Learn more about our mission. <a href="about.html">About Us</a></p> </main>
+<footer> <p>Contact Us: [risechildren01@gmai.com, +256 744 029 552]</p>
+ <p>Follow us: <a href="riseafrica">Facebook</a> | <a href="riseafrica">X</a> 
+| <a href="#">Instagram</a> </p> <p>&copy; 2025 RISE </p> </footer>
+<script> function validateForm() { const password = document.getElementById('password').value;
+ const confirmPassword = document.getElementById('confirm-password').value;
+ if (password !== confirmPassword) { alert("Passwords do not match."); return false;
+ } return true; }
+ </script>
+ </body> </html>

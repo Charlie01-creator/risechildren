@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rise Payment Collection</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #1e3a8a; /* Dark blue */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#hero {
+    background: #2563eb; /* Lighter blue */
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.cta-button {
+    background-color: #fd7e14; /* Orange */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+#payment {
+    padding: 30px;
+    text-align: center;
+}
+
+.payment-options {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align the payment cards */
+    margin-bottom: 30px;
+}
+
+.payment-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Make cards take up most of the width */
+    max-width: 400px; /* Set a max width to avoid too wide cards */
+    margin-bottom: 20px; /* Space between the cards */
+}
+
+.payment-card h3 {
+    margin-bottom: 10px;
+}
+
+.payment-card button {
+    background-color: #2563eb; /* Blue */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Make the button take full width */
+}
+
+.payment-card button:hover {
+    background-color: #1e40af; /* Darker blue */
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    background-color: #1e3a8a; /* Dark blue */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+</style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>Rise</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-text">
+            <h2>Support Rise and Make a Difference</h2>
+            <p>Your contribution helps us achieve our mission of empowering communities.</p>
+        </div>
+        <a href="donate.html" class="cta-button">Donate Now</a>
+    </section>
+
+    <!-- Payment Options Section -->
+    <section id="payment">
+        <h2>Choose Your Payment Method</h2>
+        <div class="payment-options">
+            <!-- Cryptocurrency Option -->
+            <div class="payment-card">
+                <h3>Pay with Cryptocurrency</h3>
+                <button onclick="showCryptoForm()">Pay with Crypto</button>
+            </div>
+
+            <!-- Bank Transfer Option -->
+            <div class="payment-card">
+                <h3>Pay with Bank Transfer</h3>
+                <button onclick="showBankForm()">Pay via Bank Transfer</button>
+            </div>
+
+            <!-- Credit Card Option -->
+            <div class="payment-card">
+                <h3>Pay with Credit Card</h3>
+                <button onclick="showCreditCardForm()">Pay with Credit Card</button>
+            </div>
+
+            <!-- PayPal Option -->
+            <div class="payment-card">
+                <h3>Pay with PayPal</h3>
+                <button onclick="showPayPalForm()">Pay with PayPal</button>
+            </div>
+        </div>
+
+        <!-- Forms (Will be shown dynamically) -->
+        <div id="crypto-form" class="hidden">
+            <h3>Cryptocurrency Payment</h3>
+            <p>Send your payment to the wallet address below:</p>
+            <p><strong>Wallet Address: 0x72f5d99dbc46e3df74812f0de092fe10b98ca4d1</strong></p>
+            <img src="frame.png" alt="QR Code">
+        </div>
+
+        <div id="bank-form" class="hidden">
+            <h3>Bank Transfer Payment</h3>
+            <p>Bank Details:</p>
+            <p><strong>EQUITY BANK: 4860 6100 0728 6039</strong></p>
+            <p><strong>SWIFT: EQBLUGKA</strong></p>
+        </div>
+
+        <div id="credit-card-form" class="hidden">
+            <h3>Credit Card Payment</h3>
+            <form>
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" required>
+
+                <label for="expiry-date">Expiry Date:</label>
+                <input type="text" id="expiry-date" name="expiry-date" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+
+                <button type="submit">Submit Payment</button>
+            </form>
+        </div>
+
+        <div id="paypal-form" class="hidden">
+            <h3>PayPal Payment</h3>
+            <!-- Insert PayPal Button or API integration here -->
+            <button>Pay with PayPal</button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Rise Organization | <a href="terms.html">Terms & Conditions</a> | <a href="#privacy">Privacy Policy</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
