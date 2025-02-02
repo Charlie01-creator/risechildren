@@ -143,43 +143,43 @@ footer a {
 
     <!-- Payment Options Section -->
     <section id="payment">
-        <h2>Choose Your Payment Method</h2>
+        <h2>Choose Your Donation Method</h2>
         <div class="payment-options">
             <!-- Cryptocurrency Option -->
             <div class="payment-card">
-                <h3>Pay with Cryptocurrency</h3>
+                <h3>Donate with Cryptocurrency</h3>
                 <button onclick="showCryptoForm()">Pay with Crypto</button>
             </div>
 
             <!-- Bank Transfer Option -->
             <div class="payment-card">
-                <h3>Pay with Bank Transfer</h3>
+                <h3>Donate with Bank Transfer</h3>
                 <button onclick="showBankForm()">Pay via Bank Transfer</button>
             </div>
 
             <!-- Credit Card Option -->
             <div class="payment-card">
-                <h3>Pay with Credit Card</h3>
+                <h3>Donate with Credit Card</h3>
                 <button onclick="showCreditCardForm()">Pay with Credit Card</button>
             </div>
 
             <!-- PayPal Option -->
             <div class="payment-card">
-                <h3>Pay with PayPal</h3>
+                <h3>Donate with PayPal</h3>
                 <button onclick="showPayPalForm()">Pay with PayPal</button>
             </div>
         </div>
 
         <!-- Forms (Will be shown dynamically) -->
         <div id="crypto-form" class="hidden">
-            <h3>Cryptocurrency Payment</h3>
-            <p>Send your payment to the wallet address below:</p>
+            <h3>Cryptocurrency Donation</h3>
+            <p>Send your Donation to the wallet address below:</p>
             <p><strong>Wallet Address: 0x72f5d99dbc46e3df74812f0de092fe10b98ca4d1</strong></p>
             <img src="frame.png" alt="QR Code">
         </div>
 
         <div id="bank-form" class="hidden">
-            <h3>Bank Transfer Payment</h3>
+            <h3>Bank Transfer Donation</h3>
             <p>Bank Details:</p>
             <p><strong>EQUITY BANK: 1016103347772</strong></p>
             <p>4860 6100 0728 6039</p>
@@ -187,7 +187,7 @@ footer a {
         </div>
 
         <div id="credit-card-form" class="hidden">
-            <h3>Credit Card Payment</h3>
+            <h3>Credit Card Donation</h3>
             <form>
                 <label for="card-number">Card Number:</label>
                 <input type="text" id="card-number" name="card-number" required>
@@ -198,12 +198,12 @@ footer a {
                 <label for="cvv">CVV:</label>
                 <input type="text" id="cvv" name="cvv" required>
 
-                <button type="submit">Submit Payment</button>
+                <button type="submit">Submit Donation</button>
             </form>
         </div>
 
         <div id="paypal-form" class="hidden">
-            <h3>PayPal Payment</h3>
+            <h3>PayPal Donation</h3>
             <!-- Insert PayPal Button or API integration here -->
             <div>
             <a href="https://www.paypal.com/donate/?hosted_button_id=ZJDG32MQXGPVE" target="_blank">Donate via PayPal</a>
