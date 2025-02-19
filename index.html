@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+hh<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -43,13 +43,14 @@
       flex-direction: column;
       align-items: center;
       background-color: #333;
-      position: absolute;
-      top: 60px;
-      right: 0;
+      position: fixed;
+      top: 80px; /* Adjust based on hamburger position */
+      left: 0;
       width: 100%;
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.3s ease-in-out;
+      z-index: 999; /* Ensure it stays below the hamburger */
     }
     .nav-links.active {
       max-height: 300px; /* Adjust based on content */
@@ -68,7 +69,10 @@
       display: flex;
       flex-direction: column;
       cursor: pointer;
-      margin: 10px; /* Adjust margin as needed */
+      position: fixed; /* Fixed position */
+      top: 20px; /* Adjust as needed */
+      left: 20px; /* Adjust as needed */
+      z-index: 1000; /* Ensure it stays on top */
     }
     .hamburger div {
       width: 25px;
